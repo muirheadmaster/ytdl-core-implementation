@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../favicon.ico">
+    <title>Update Profile</title>
+</head>
+
+<body>
+    <div class="profile form">
+        <h3 class="title">Update Profile</h3>
+        <p class="profileMessage"></p>
+        <!--
+        <button id='redirectLogin' onclick="redirectLogin()" style="display:none;">Back to Login</button>
+        -->
+        <input class="profile_email" placeholder="Email" type="text" />
+        <br>
+        <input class="currentPassword" placeholder="Current Password" type="password" />
+        <br>
+        <input class="changePassword" placeholder="New Password" type="password" />
+        <br>
+        <input class="confirmChangePassword" placeholder="Confirm New Password" type="password" />
+        <br>
+        <!--
+               <input class="firstName" placeholder="First Name" type="text" />
+               <br>
+               <input class="middleName" placeholder="Middle Name" type="text" />
+               <br>
+               <input class="lastName" placeholder="Last Name" type="text" />
+               <br>
+               -->
+        <button id='updateProfile' onclick="updateProfile()">Update Profile</button>
+    </div>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script src="js/updateProfile.js"></script>
+</body>
+
+</html>

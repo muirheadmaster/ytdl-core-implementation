@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="icon" href="../favicon.ico">
+      <title>YouTube Video Saver</title>
+      <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="nzq9vjs05r0j7s8"></script>
+   </head>
+   <body>
+      <ul class="pages" style="list-style: none;word-wrap: break-word;">
+         <li class="login page">
+            <div class="login form">
+               <h3 class="title">Login</h3>
+               <p class="errorMessage"></p>
+               <input class="email" placeholder="Email" type="text" />
+               <br>
+               <input class="password" placeholder="Password" type="password" />
+               <br>
+               <button id='login' onclick="loginButton()">Login</button>
+               <p class='registration'>New user? Click <a onclick="loadRegistrationPage()">here</a> to create an account.</p>
+               <p class='updateProfile'>Want to change your password? Click <a onclick="loadProfilePage()">here</a> to update your profile.</p>
+            </div>
+         </li>
+         
+         <li class="converter page" style="display:none;">
+             <div class="converter form">
+                <h1>YouTube to mp3/mp4 Converter</h1>
+                <input id="url" class="url" placeholder="YouTube Video URL" type="text" style="width:100%"/>
+                <select id="file_type" required>
+                   <option value="mp3">mp3</option>
+                   <option value="mp4">mp4</option>
+                </select>
+                <button id='submit' onclick="submitButton()">Convert</button>
+                <button id='reload' style='display:none;' onclick="convertAgain()">Convert Again</button>
+                <a id="download" style="display:none;">
+                <button>Download</button>
+                </a>
+                <a id="dropboxButton" class="dropboxButton"></a>
+                <p class="dropbox_success"></p>
+                <p class="msg"></p>
+            </div>
+            <hr>
+            <div class="footer">
+                <p class="welcome"></p>
+                <button id="logout" onclick="logout()">Logout</button>
+                <button id='redirectProfile' onclick="window.location.replace('https://user.tjhsst.edu/2018wsun/YouTubeSaver/updateProfile.html');">Update Profile</button>
+            </div>
+         </li>
+      </ul>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+      <script src="js/main.js"></script>
+   </body>
+</html>

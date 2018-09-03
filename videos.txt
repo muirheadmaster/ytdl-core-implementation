@@ -1,0 +1,41 @@
+Extract mp3s of a playlist:
+youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 -o "%(playlist)s/%(title)s.%(ext)s" {{playlist url without "v=.."}}
+doskey playlist = youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 -o "%(playlist)s/%(title)s.%(ext)s" $*
+
+Extract mp3 of video:
+youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 -o "%(title)s.%(ext)s" {{video url}}
+doskey ytmp3 = youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 -o "%(title)s.%(ext)s" $*
+
+Extract best video:
+youtube-dl -f bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=webm] -o "%(title)s.%(ext)s" {{video url without index or list}}
+doskey ytmp4 = youtube-dl -f bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=webm] -o "%(title)s.%(ext)s" $*
+
+Update youtube-dl:
+pip install -U youtube-dl
+
+Update ytdl-core:
+npm install ytdl-core
+
+Sample Links:
+https://www.youtube.com/watch?v=cXeb9cb6k0I
+https://www.youtube.com/watch?v=npFAmRqHpQc
+https://www.youtube.com/watch?v=eKoD2CRr_KA
+https://www.youtube.com/watch?v=pc9uioSyAoA
+https://www.youtube.com/watch?v=qIoDWTF0qSo
+https://www.youtube.com/watch?v=Gv0Az2HvEDs
+https://www.youtube.com/watch?v=9mUcDMZviJY
+https://www.youtube.com/watch?v=HEkerSi5Fig
+https://www.youtube.com/watch?v=vYV-XJdzupY
+https://www.youtube.com/watch?v=uRtLmZwutII
+https://www.youtube.com/watch?v=efoUJfkOisQ
+https://www.youtube.com/watch?v=RL977y-0Dyk
+https://www.youtube.com/watch?v=-tKVN2mAKRI
+https://www.youtube.com/watch?v=hw5DmaD939A
+
+Super High Resolution:
+https://www.youtube.com/watch?v=1La4QzGeaaQ
+
+Audio Problem:
+https://www.youtube.com/watch?v=3n03HQ13r3I
+
+Bad titles have bad characters and unreliable downloads. --Fixed with video id as filename
